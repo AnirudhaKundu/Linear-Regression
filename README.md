@@ -1,32 +1,34 @@
 # Linear Regression – Full Intuition Journey
 
+---
+
 ## 1. Starting Point
 
-We began with the simple linear regression model:
+We begin with the simple linear regression model:
 
-[
-y = \beta_0 + \beta_1 x + \epsilon
-]
+```
+y = β₀ + β₁ x + ε
+```
 
 Estimated model:
 
-[
-\hat{y} = b_0 + b_1 x
-]
+```
+ŷ = b₀ + b₁ x
+```
 
 ---
 
 ## 2. Goal
 
-Find (b_0) and (b_1) such that prediction error is minimized.
+Find values of **b₀** and **b₁** such that prediction error is minimized.
 
 ---
 
 ## 3. Error Function
 
-[
-S(b_0, b_1) = \sum (y_i - b_0 - b_1 x_i)^2
-]
+```
+S(b₀, b₁) = Σ (yᵢ - b₀ - b₁ xᵢ)²
+```
 
 This is the **objective function**.
 
@@ -34,7 +36,7 @@ This is the **objective function**.
 
 ## 4. Key Question
 
-> Are we finding values of (b_0, b_1) such that (S) is minimum?
+> Are we finding values of b₀, b₁ such that S is minimum?
 
 ✔ Yes.
 
@@ -44,16 +46,15 @@ This is the **objective function**.
 
 We compute:
 
-[
-\frac{\partial S}{\partial b_0} = 0
-\quad
-\frac{\partial S}{\partial b_1} = 0
-]
+```
+∂S/∂b₀ = 0
+∂S/∂b₁ = 0
+```
 
 ### Interpretation:
 
-* No improvement in (b_0) direction
-* No improvement in (b_1) direction
+* No improvement in **b₀ direction**
+* No improvement in **b₁ direction**
 
 ➡️ This ensures we are at a **stationary point in all directions**
 
@@ -88,12 +89,12 @@ Possible outcomes:
 
 Because:
 
-* (S(b_0, b_1)) is **quadratic**
+* S(b₀, b₁) is a **quadratic function**
 * Surface is **convex**
 
 ### Therefore:
 
-> Any stationary point = global minimum
+> The stationary point is the **global minimum**
 
 ---
 
@@ -103,22 +104,24 @@ Because:
 
 We plotted:
 
-* 20 points
+* 20 data points
 * Multiple candidate lines
 
 Each line corresponds to:
-[
-(b_0, b_1)
-]
+
+```
+(b₀, b₁)
+```
 
 ---
 
 ### Step 2: Parameter Space
 
 We plotted:
-[
-(b_0, b_1)
-]
+
+```
+(b₀, b₁)
+```
 
 Each point = one line
 
@@ -127,9 +130,10 @@ Each point = one line
 ### Step 3: Error Surface
 
 We plotted:
-[
-(b_0, b_1, S)
-]
+
+```
+(b₀, b₁, S)
+```
 
 This forms a:
 
@@ -154,7 +158,7 @@ We explored:
 
 ### Observation:
 
-* Not a single point
+* Not just a single point
 * A **region of points with similar error**
 
 ---
@@ -163,13 +167,13 @@ We explored:
 
 We plotted points where:
 
-[
-S \leq 1.2 \times S_{min}
-]
+```
+S ≤ 1.2 × S_min
+```
 
 Result:
 
-> An **elongated diagonal cluster (ellipse)**
+> An **elongated diagonal cluster (ellipse-like)**
 
 ---
 
@@ -177,9 +181,9 @@ Result:
 
 We observed:
 
-[
-b_0 \uparrow \Rightarrow b_1 \downarrow
-]
+```
+b₀ ↑ ⇒ b₁ ↓
+```
 
 Meaning:
 
